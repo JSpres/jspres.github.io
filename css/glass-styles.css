@@ -1,0 +1,323 @@
+/*
+ * JSpres
+ * Copyright (C) 2013 Valentin Kirilov
+ * 
+ * This application is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+/*
+.glass {
+    background-color: rgba(3, 29, 60, 0.3); 
+    
+    border-radius: 9px; 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    
+    /* background: url("../images/glass/glass-middle.png") repeat-x; 
+    width: auto;
+    height: 62px;
+
+    position: relative;
+}
+*/
+.glass-menu {
+    width: 100%;
+    background-color: rgba(3, 29, 60, 0.3); 
+    height: 62px;
+    overflow: hidden;
+    
+    letter-spacing: 0.3pt;
+    margin: 0px auto;
+    border-radius: 15px; 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-menu.small-height {
+    height: 52px;
+}
+.glass-selectable {
+    width: 140px;
+    height: 58px;
+    overflow: hidden;
+    
+    position: relative;
+    float: left;
+    display: inline;
+    
+    letter-spacing: 0.3pt;
+    font-size: 21pt;
+    line-height: 40pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    
+    margin: 0px 0px 0px 10px;
+    
+}
+.glass-selectable.long {
+    width: 200px;
+    
+    padding: 0 2px;
+}
+.glass-selectable.short {
+    width: 100px;
+    
+    padding: 0 5px;
+}
+.glass-selectable:hover {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.09)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.09) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.09) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.09) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.09) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+.glass-selectable:active {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%, rgba(0,0,0,0) 99%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.53)), color-stop(99%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.57) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.53) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51000000', endColorstr='#00000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    
+    font-size: 27px;
+}
+
+
+.glass.separator {
+    background: url("../images/glass/glass-separator.png");
+    width: 7px;
+    height: 62px;
+
+    position: relative;
+    float: left;
+}
+
+.glass.before {
+    background: url("../images/glass/glass-left.png");
+    
+    width: 14px;
+    height: 62px;  
+}
+.glass.after {
+    background: url("../images/glass/glass-right.png");
+    
+    width: 17px;
+    height: 62px;
+}
+
+
+.glass.style2 {
+    background: url("../images/glass/glass2-middle.png") repeat-x;
+    height: 82px;
+    
+    position: relative;
+    float: left;
+}
+
+.glass.left.style2 {
+    background: url("../images/glass/glass2-left.png") repeat-x;
+    width: 19px;
+    
+}
+.glass.right.style2 {
+    background: url("../images/glass/glass2-right.png") repeat-x;
+    width: 14px;
+    
+}
+
+
+
+/* -----------------------------------------------------------------------------
+ * CONTAINERS
+ * HEADER STYLES
+ * -----------------------------------------------------------------------------
+ */
+.glass-container {
+    background-color: rgba(255, 255, 255, 0.03); 
+    width: 100%;
+    height: auto;
+    
+    padding: 13px; 
+    border-radius: 9px; 
+    box-shadow: inset 0px 0px 4px rgba(235, 235, 235, 0.3), 0px 2px 3px black;
+    
+    color: #bdaec6;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: left;
+    font-size: 12pt;
+}
+.glass-container.light {
+    background-image: url("../images/backgrounds/page-fader-toolbar.png");
+    box-shadow: inset 0px 0px 4px rgba(235, 235, 235, 0.3), 0px 2px 3px black, inset 0px 0px 100px rgba(235, 235, 235, 0.1);
+}
+.glass-header {
+    background-color: rgba(3, 29, 60, 0.3); 
+    width: 350px;
+    height: 35px;
+    
+    position: relative;
+    float: left;
+    margin: 0 0 10px -25px;
+    
+    border-radius: 9px; 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-header.purple {
+     width: 180px;
+     background-color: rgba(45, 9, 75, 0.3); 
+ }
+.glass-header .title { 
+    width: 100%;
+    position: relative;
+    float: left;
+    margin: 7px 0 0 0px;
+    
+    text-align: center;
+    font-size: 16pt;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+}
+ 
+/* OVERVIEW STUFF
+ */
+.glass-header.profile {
+    width: 250px;
+    margin: -50px 0 10px -5px;
+    position: relative;
+    z-index: 8;
+    
+    cursor: pointer;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * CONTAINERS
+ * BUTTONS STYLES
+ * -----------------------------------------------------------------------------
+ */
+
+.glass-button {
+    background-color: rgba(3, 29, 60, 0.3); 
+    width: 180px;
+    height: 35px;
+    
+    position: relative;
+    float: left;
+    margin: 5px 0 10px -25px;
+    
+    border-radius: 9px; 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-button:hover {
+    background-color: rgba(3, 29, 60, 0.3); 
+    box-shadow: inset 0px 0px 27px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    
+    cursor: pointer;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+.glass-button:active {
+    background-color: rgba(3, 29, 60, 0.3); 
+    box-shadow: inset 0px 0px 21px rgba(235, 235, 235, 0.21), inset 0px 0px 50px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-button.small {
+    width: 85px;
+}
+.glass-button.purple {
+    background-color: rgba(45, 9, 75, 0.3); 
+}
+.glass-button.purple:hover {
+    background-color: rgba(45, 9, 75, 0.3); 
+    box-shadow: inset 0px 0px 27px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    
+    cursor: pointer;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+.glass-button.purple:active {
+    background-color: rgba(45, 9, 75, 0.3); 
+    box-shadow: inset 0px 0px 21px rgba(235, 235, 235, 0.21), inset 0px 0px 50px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-button.red {
+    background-color: rgba(82, 0, 0, 0.3); 
+}
+.glass-button.red:hover {
+    box-shadow: inset 0px 0px 27px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+    
+    cursor: pointer;
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+.glass-button.red:active {
+    box-shadow: inset 0px 0px 21px rgba(235, 235, 235, 0.21), inset 0px 0px 50px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.glass-button .title { 
+    width: 100%;
+    position: relative;
+    float: left;
+    margin: 7px 0 0 0px;
+    
+    text-align: center;
+    font-size: 16pt;
+    color: #BBBBBB;
+    text-shadow: 1px 1px 1px #000000;
+    
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+.glass-button:hover .title { 
+    color: #EEEEEE;
+    text-shadow: 2px 2px 2px #000000;
+}
+.glass-button:active .title { 
+    color: #999999;
+}
+.glass-button .text { 
+    width: 100%;
+    position: relative;
+    float: left;
+    margin: 7px 0 0 0px;
+    
+    text-align: center;
+    font-size: 14pt;
+    color: #BBBBBB;
+    text-shadow: 1px 1px 1px #000000;
+    
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+}
+.glass-button.no-left-margin {
+    margin: 5px 0 10px 5px;    
+}
+
+/* OVERVIEW STUFF
+ */
+.glass-button.purple.menu {
+    width: 250px;
+    margin: 15px 0 10px -12px;
+    position: relative;
+    z-index: 8;
+}

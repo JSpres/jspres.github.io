@@ -1,0 +1,621 @@
+/*
+ * JSpres
+ * Copyright (C) 2013 Valentin Kirilov
+ * 
+ * This application is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+html, body {
+	/*8background: #c3c3e5 url("..images/backgrounds/default-background.jpg") fixed center;*/
+    background: #222222 url("../images/backgrounds/default-background.jpg") fixed center;
+    width:100%;
+    height:100%;
+     
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    
+	color: #443266;
+	font-family: electrolize, jura, Georgia, serif;
+    text-align: center;
+}
+
+#subscribe {
+    width: 980px;
+    height: auto;
+    
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+#subscribe #header {
+    background: url("../images/logo-big.png");
+    width: 256px;
+    height: 256px;
+        
+    margin: 0 auto;
+}
+#subscribe #title {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 420px;
+    height: 48px;
+    
+    margin: 16px auto 0 auto;
+    padding: 5px 5px 0 5px;
+    
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+
+    -moz-box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+#subscribe #title .cant{
+    background: rgba(21, 21, 21, 0.6);
+    width: 100%;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, 0.3);
+    
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    
+    text-align: center;
+    font-size: 21pt;
+    line-height: 38pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #AAAAAA;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+#subscribe .subscribe-form {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 500px;
+    height: 100px;
+    
+    margin: 0 auto;
+    padding: 5px;
+    
+    position: relative;
+    z-index: 10;
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    -webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#subscribe .subscribe-form .cant {
+    width: 100%;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, .2);
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    text-align: center;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #bdaec6;
+    text-shadow: 1px 1px 1px #000000;
+    
+}
+
+#subscribe .subscribe-form .email-input {
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(36, 36 , 36, 1);
+    
+    width: 330px;
+    height: 48px;
+    
+    position: relative;
+    float: left;
+    
+    margin: 20px 0 20px 10px;
+    padding: 5px 10px 5px 10px;
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    text-align: left;
+    font-size: 16pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #AAAAAA;
+    text-shadow: 1px 1px 1px #000000;
+}
+#subscribe .subscribe-form .email-input.form-error {
+    background: rgba(245, 225, 233, 0.2); 
+    border: 1px solid rgba(79, 21 , 44, 0.6);
+ 
+    color: #C9AFBA;
+    text-shadow: 1px 1px 1px #000000;
+}
+#subscribe .subscribe-form div.form-error {
+    width: 300px;
+    height: 16px;
+    
+    position: relative;
+    float: left;
+    
+    margin: -20px 0 0 16px;
+    text-align: left;
+    font-size: 9pt;
+}
+#subscribe .subscribe-form .email-submit {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5c5c5c), color-stop(1, #474747) );
+	background:-moz-linear-gradient( center top, #5c5c5c 5%, #474747 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c5c5c', endColorstr='#474747');
+	background-color:#5c5c5c;
+    
+    width: 140px;
+    height: 60px;
+    
+    margin: 20px 0 0 -10px;
+	padding: 16px 5px;
+    
+    position: relative;
+    float: left;
+    
+    border: 1px solid rgba(36, 36 , 36, 1);
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    
+	-moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
+	box-shadow: inset 0px 0px 0px 0px #ffffff;
+	
+    font-family: electrolize, jura, sans-serif;
+    font-size: 18pt;
+    
+	
+	display:inline-block;
+	color: #AAAAAA;
+	
+	font-weight:bold;
+	
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000;
+}
+#subscribe .subscribe-form .email-submit:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #474747), color-stop(1, #5c5c5c) );
+	background:-moz-linear-gradient( center top, #474747 5%, #5c5c5c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#474747', endColorstr='#5c5c5c');
+	background-color:#474747;
+}
+#subscribe .subscribe-form .email-submit:active {
+	position:relative;
+	top:1px;
+}
+
+#subscribe .subscribe-form #form-before {
+}
+
+#subscribe .subscribe-form #form-successfull {
+    width: 480px;
+    height: 90px;
+    
+    margin: 5px auto;
+}
+#subscribe .subscribe-form #form-successfull .title {
+    width: 100%;
+    height: 48px;
+    
+    position: relative;
+    float: left;
+}
+#subscribe .subscribe-form #form-successfull .title .ico {
+    width: 48px;
+    height: 48px;
+    
+    position: relative;
+    float: left;
+} 
+#subscribe .subscribe-form #form-successfull .title .message {
+    height: 100%;
+    
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    
+    font-size: 27pt;
+    line-height: 48px;
+}
+#subscribe .subscribe-form #form-successfull .info {   
+    width: 200px;
+    height: 40px;
+    
+    position: relative;
+    float: left;
+    margin-left: 60px;
+    text-align: left;
+}
+#subscribe .subscribe-form #form-successfull .info.detected {   
+    width: 420px;
+    height: 40px;
+}
+#subscribe .subscribe-form #form-successfull .info span {
+    color: #EEEEEE;
+}
+#subscribe .subscribe-form #form-successfull .arrow {
+    position: relative;
+    float: left;
+}
+#subscribe .subscribe-form #form-successfull .arrow.detected {
+    position: relative;
+    float: right;
+    
+    margin-top: -28px;
+
+}
+
+#subscribe #social {
+    width: 300px;
+    height: 100px;
+    
+    margin: 0px auto;
+    position: relative;
+    z-index: 8;
+}
+
+#subscribe #social .icon-container {
+    width: 80px;
+    height: auto;
+    
+    margin: 0 10px;
+    position: relative;
+    float: left;
+}
+#subscribe #social .icon {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 70px;
+    height: 70px;
+    
+    position: relative;
+    float: left;
+    
+    -webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    
+    transition: 0.1s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    
+    padding: 0 5px 0 5px;
+}
+#subscribe #social .icon .cant{
+    background: rgba(21, 21, 21, 0.5);
+    width: 63px;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, 0.2);
+    border-top: none;
+    
+    padding: 5px 0 0 5px;
+    
+    text-align: center;
+}
+#subscribe #social .icon .cant2{
+    background: rgba(21, 21, 21, 0.5);
+    width: 63px;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, 0.2);
+    border-top: none;
+    
+    padding: 5px 0 0 5px;
+    
+    text-align: center;
+}
+#subscribe #social .icon:hover {
+    height: 150px;
+}
+
+#subscribe #social .icon-bottom {
+    background: url("../images/backgrounds/social-bottom.png");
+    width: 84px;  
+    height: 40px;  
+    
+    float: left;
+    position: relative;
+    
+    margin-left: -2px;
+}
+
+#subscribe #social .icon .fb-like {
+    display: none;
+    margin-top: 4px;
+}
+#subscribe #social .icon:hover .fb-like {
+    display: block;
+}
+#subscribe #social .icon iframe {
+    display: none;
+    margin-top: 4px;
+}
+#subscribe #social .icon:hover iframe {
+    display: block;
+}
+
+.subscribe-footer {
+    margin: 100px auto;
+    
+    font-size: 10pt;
+    line-height: 10pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #aaaaaa;
+    text-shadow: 1px 1px 1px #000000;
+}
+.subscribe-footer.without-social {
+    margin: 9px auto;
+}
+
+/* VIEW STYLES
+ */
+#subscribe-view {
+    
+}
+#subscribe-view h1 {
+    margin: auto;
+    
+    text-align: center;
+    color: #EEEEEE;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+#subscribe-view h5 {
+    margin: auto;
+    
+    text-align: center;
+    color: #999999;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+#subscribe-view .imager {
+    width: 800px;
+    
+    margin: 10px auto;
+}
+#subscribe-view .imager img {
+    width: auto;
+    height: auto;
+}
+
+#subscribe-view p {
+    width: 860px;
+    
+    margin: 10px auto;
+    
+    font-size: 12pt;
+    font-family: electrolize, jura, tahoma, sans-serif;
+    color: #CCCCCC;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* NOT SUPPORTED STYLES
+ */
+ 
+#subscribe .not-supported {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 500px;
+    height: 220px;
+    
+    margin: 0 auto;
+    padding: 5px;
+    
+    position: relative;
+    z-index: 10;
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    -webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#subscribe .not-supported .cant {
+    width: 100%;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, .2);
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    text-align: center;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #bdaec6;
+    text-shadow: 1px 1px 1px #000000;
+    
+}
+#subscribe .not-supported .cant .title {
+    width: 360px;
+    height: 42pt;
+    
+    margin: 10px 0 5px 10px;
+    position: relative;
+    float: left;
+    
+    text-align: left;
+    font-size: 21pt;
+    line-height: 21pt;
+}
+#subscribe .not-supported .cant .message {
+    width: 350px;
+    height: auto;
+    
+    margin: 5px 0 5px 10px;
+    position: relative;
+    float: left;
+    
+    text-align: left;
+    font-size: 12pt;
+    line-height: 12pt;
+}
+#subscribe .not-supported .cant .not-image {
+    width: 150px;
+    
+    margin: -21px -21px 0 0;
+    position: relative;
+    float: right;
+}
+#subscribe .not-supported .cant .not-image.no-margin {
+    width: 150px;
+    
+    left: 100%;
+    margin-left: -150px;
+    margin-top: 16px;
+    position: absolute;
+    float: right;
+}
+#subscribe .not-supported .cant .download {
+    width: 400px;
+    height: auto;
+    
+    position: relative;
+    float: left;
+    
+    margin: 0px 0 0 32px;
+    text-align: left;
+}
+
+#subscribe .rules {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 800px;
+    height: auto;
+    
+    margin: 0 auto;
+    padding: 5px;
+    
+    position: relative;
+    z-index: 10;
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    -webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#subscribe .rules .cant {
+    width: 780px;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, .2);
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    padding: 10px;
+    text-align: left;
+    font-size: 12pt;
+    line-height: 14pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #AAAAAA;
+    text-shadow: 1px 1px 1px #000000; 
+}
+#subscribe .rules .cant li {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    
+    border-bottom: 1px dashed rgba(255, 255 , 255, .2);
+}
+
+#subscribe .error {
+    background: url("../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 500px;
+    height: auto;
+    
+    margin: 0 auto;
+    padding: 5px;
+    
+    position: relative;
+    z-index: 10;
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    
+    -webkit-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:  0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+#subscribe .error .cant {
+    width: 100%;
+    height: 100%;
+    
+    border: 1px dashed rgba(255, 255 , 255, .2);
+    
+    border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    text-align: center;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: electrolize, jura, sans-serif;
+    color: #bdaec6;
+    text-shadow: 1px 1px 1px #000000;  
+}
+#subscribe .error .cant .error-image {
+    width: 480px;
+    position: relative;
+    margin: -16px auto 0 auto;
+}
+#subscribe .error .cant .error-msg {
+    width: 450px;
+    position: relative;
+    margin: 10px auto;
+    
+    text-align: left;
+    font-size: 12pt;
+    color: #AAAAAA;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+
+a, a:visited, a:active {
+    color: #006699;
+    font-family: electrolize, jura, Georgia, serif;
+    text-shadow: 1px 1px 1px #000000;
+    text-decoration: none;
+}
+a:hover {
+    color: #86d7ff;
+    text-decoration: underline;
+}

@@ -1,0 +1,1030 @@
+/* 
+ * JSpres
+ * Copyright (C) 2013 Valentin Kirilov
+ * 
+ * This application is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+.button {
+    background: url("../../images/glass/button-glass03-middle.png") repeat-x;
+    
+    width: auto;
+    height: 48px;
+    margin: 0;
+    
+    position: relative;
+    float: left;
+    
+    border-left: 2px solid rgba(0, 0, 0, 0); 
+    border-right: 2px solid rgba(0, 0, 0, 0); 
+    
+    text-decoration: none;
+    font-size: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    font-family: electrolize, jura, Georgia, serif;
+    color: #efdbf5;
+        
+}
+.button:hover {
+    background: url("../../images/glass/button-glass02-middle.png") repeat-x;
+
+    border-left: 2px solid rgba(0, 0, 0, 0.3); 
+    border-right: 2px solid rgba(0, 0, 0, 0.3); 
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000;
+}
+.button:active {
+    background: url("../../images/glass/button-glass01-middle.png") repeat-x;
+}
+
+.button.disabled {
+    background: url("../../images/glass/button-glass01-middle.png") repeat-x;
+    border-left: 1px solid rgba(0, 0, 0, 0.3); 
+    border-right: 1px solid rgba(0, 0, 0, 0.3); 
+}
+.button.toggled {
+    background: url("../../images/glass/button-glass04-middle.png") repeat-x;
+
+    border-left: 2px solid rgba(0, 0, 0, 0.3); 
+    border-right: 2px solid rgba(0, 0, 0, 0.3); 
+    color: #efdbf5;
+    text-shadow: 1px 1px 1px #333;
+}
+.button.toggled:hover {
+    background: url("../../images/glass/button-glass02-middle.png") repeat-x;
+
+    text-decoration: none;
+    color: #efdbf5;
+    text-shadow: 1px 1px 1px #000;
+}
+.button.toggled:active {
+    background: url("../../images/glass/button-glass05-middle.png") repeat-x;
+}
+
+.button.left {
+    margin-left: 5px;
+    padding: 0 10px 0 6px;
+    border-left: 2px solid rgba(0, 0, 0, 0.2); 
+}
+.button.left:before {
+    background: url("../../images/glass/button-glass03-left.png");
+    background-size: 100% 100%;
+    width: 12px;
+    height: 48px;
+    
+    border: none;
+    border-right: 2px solid rgba(255, 255, 255, 0); 
+    position: relative;
+    float: left;
+    margin: 0px 0 0 -20px;
+    content: " ";
+}
+
+.button.middle {
+    padding: 0 6px 0 6px;
+}
+.button.right {
+    padding: 0 6px 0 6px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2); 
+}
+.button.right:after {
+    background: url("../../images/glass/button-glass03-right.png");
+    background-size: 100% 100%;
+    width: 12px;
+    height: 48px;
+    
+    border-left: 2px solid rgba(255, 255, 255, 0); 
+    position: relative;
+    float: right;
+    margin: 0px -20px 0 0px;
+    content: " ";
+}
+
+a.button {
+	color: #efdbf5;
+	text-shadow: none;
+    line-height: 48px;
+    text-align: center;
+}
+.button span {
+    vertical-align: middle;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 48px;
+
+}
+
+/*
+ * ICONS PACK
+ */
+ 
+.button .title {
+    width: auto;
+    position: relative;
+    float: right;
+    margin: 0 5px 0 10px;
+}
+.icon {
+    background-image: url("../../images/icons-pack.png");
+    width: 24px;
+    height: 24px;
+    
+    position: relative;
+    float: left;
+}
+.iconTools {
+    background-image: url("../../images/icons-pack2.png");
+    width: 16px;
+    height: 16px;
+    
+    position: relative;
+    float: left;
+}
+.iconTools:hover {
+    margin-top: -1px; 
+}
+.iconTools:active {
+    margin-top: 1px; 
+}
+ 
+.icon.label {
+    background-position: -0px -0px; 
+}
+.icon.image {
+    background-position: -24px -0px; 
+}
+.icon.video {
+    background-position: -48px -0px; 
+}
+.icon.undo {
+    background-position: -72px -0px; 
+}
+.icon.redo {
+    background-position: -96px -0px; 
+}
+.icon.add {
+    background-position: -120px -0px; 
+}
+.icon.remove {
+    background-position: -144px -0px; 
+}
+.icon.presentation-output {
+    background-position: -168px -0px; 
+}
+.icon.presentation-editor {
+    background-position: -192px -0px; 
+}
+.icon.presentation-transitions {
+    background-position: -216px -0px; 
+}
+.icon.user {
+    background-position: -0px -48px; 
+}
+.icon.download {
+    background-position: -24px -48px; 
+}
+.icon.download-zip {
+    background-position: -48px -48px; 
+}
+.icon.submit-feauture {
+    background-position: -72px -48px; 
+}
+.icon.information {
+    background-position: -96px -48px; 
+}
+.icon.send-feedback {
+    background-position: -120px -48px; 
+}
+.icon.sign-out {
+    background-position: -48px -96px; 
+}
+.icon.present {
+    background-position: -72px -96px; 
+}
+.icon.views {
+    background-position: -0px -144px; 
+}
+.icon.favorited {
+    background-position: -24px -144px; 
+}
+.icon.likes {
+    background-position: -48px -144px; 
+}
+.icon.private {
+    background-position: -72px -144px; 
+}
+.icon.public {
+    background-position: -96px -144px; 
+}
+.icon.paneOptions {
+    background-position: -120px -144px; 
+}
+.icon.customize {
+    background-position: -144px -144px; 
+}
+.icon.badges {
+    background-position: -168px -144px; 
+}
+.icon.liked {
+    background-position: -192px -144px; 
+}
+.icon.presentations {
+    background-position: -216px -144px; 
+}
+.icon.resources {
+    background-position: -0px -192px; 
+}
+.icon.facebook {
+    background-position: -24px -192px; 
+}
+.icon.twitter {
+    background-position: -48px -192px; 
+}
+.icon.statistics {
+    background-position: -72px -192px; 
+}
+.icon.free {
+    background-position: -96px -192px; 
+}
+.icon.signout {
+    background-position: -120px -192px; 
+}
+.icon.search {
+    background-position: -144px -192px; 
+}
+.icon.layouts {
+    background-position: -168px -192px; 
+}
+.icon.import {
+    background-position: -96px -96px; 
+}
+.icon.help {
+    background-position: -120px -96px; 
+}
+.icon.unkonwn {
+    background-position: -192px -192px; 
+}
+
+
+.iconTools.bold {
+    background-position: -0px -0px; 
+}
+.iconTools.italic {
+    background-position: -16px -0px; 
+}
+.iconTools.underline {
+    background-position: -32px -0px; 
+}
+.iconTools.left-align {
+    background-position: -48px -0px; 
+}
+.iconTools.center-align {
+    background-position: -64px -0px; 
+}
+.iconTools.right-align {
+    background-position: -80px -0px; 
+}
+.iconTools.bullets {
+    background-position: -96px -0px; 
+}
+.iconTools.font {
+    background-position: -112px -0px; 
+}
+.iconTools.font-color {
+    background-position: -128px -0px; 
+}
+.iconTools.href {
+    background-position: -144px -0px; 
+}
+.iconTools.fontSize {
+    background-position: -0px -32px; 
+}
+.iconTools.youtubeVideo {
+    width: 32px;
+    background-position: -16px -32px; 
+}
+.iconTools.embedVideo {
+    margin-left: 16px;
+    background-position: -48px -32px; 
+}
+.iconTools.upload {
+    background-position: -64px -32px; 
+}
+.iconTools.solidColor {
+    background-position: -80px -32px; 
+}
+.iconTools.gradientColor {
+    background-position: -96px -32px; 
+}
+.iconTools.fromInternet {
+    background-position: -112px -32px; 
+}
+.iconTools.slideEditIcon {
+    background-position: -128px -32px; 
+}
+.iconTools.hyperlink {
+    background-position: -144px -32px; 
+}
+.iconTools.fromComputer1 {
+    background-position: -0px -64px; 
+}
+.iconTools.fromComputer2 {
+    background-position: -16px -64px; 
+}
+
+
+/* -----------------------------------------------------------------------------
+*/
+
+.icon.label:hover {
+    background-position: -0px -24px; 
+}
+.icon.image:hover {
+    background-position: -24px -24px; 
+}
+.icon.video:hover {
+    background-position: -48px -24px; 
+}
+.icon.undo:hover {
+    background-position: -72px -24px; 
+}
+.icon.redo:hover {
+    background-position: -96px -24px; 
+}
+.icon.add:hover {
+    background-position: -120px -24px; 
+}
+.icon.remove:hover {
+    background-position: -144px -24px; 
+}
+.icon.presentation-output:hover {
+    background-position: -168px -0px; 
+}
+.icon.presentation-editor:hover {
+    background-position: -192px -0px; 
+}
+.icon.presentation-transitions:hover {
+    background-position: -216px -0px; 
+}
+.icon.user:hover {
+    background-position: -0px -72px; 
+}
+.icon.download:hover {
+    background-position: -24px -72px; 
+}
+.icon.download-zip:hover {
+    background-position: -48px -72px; 
+}
+.icon.submit-feauture:hover {
+    background-position: -72px -72px; 
+}
+.icon.information:hover {
+    background-position: -96px -72px; 
+}
+.icon.send-feedback:hover {
+    background-position: -120px -72px; 
+}
+.icon.sign-out:hover {
+    background-position: -48px -120px; 
+}
+.icon.present:hover {
+    background-position: -72px -120px; 
+}
+.icon.views:hover {
+    background-position: -0px -168px; 
+}
+.icon.favorited:hover {
+    background-position: -24px -168px; 
+}
+.icon.likes:hover {
+    background-position: -48px -168px; 
+}
+.icon.private:hover {
+    background-position: -72px -168px; 
+}
+.icon.public:hover {
+    background-position: -96px -168px; 
+}
+.icon.paneOptions:hover {
+    background-position: -120px -168px; 
+}
+.icon.customize:hover {
+    background-position: -144px -168px; 
+}
+.icon.badges:hover {
+    background-position: -168px -168px; 
+}
+.icon.liked:hover {
+    background-position: -192px -168px; 
+}
+.icon.presentations:hover {
+    background-position: -216px -168px; 
+}
+.icon.resources:hover {
+    background-position: -0px -216px; 
+}
+.icon.facebook:hover {
+    background-position: -24px -216px; 
+}
+.icon.twitter:hover {
+    background-position: -48px -216px; 
+}
+.icon.import:hover {
+    background-position: -96px -120px; 
+}
+.icon.help:hover {
+    background-position: -120px -120px; 
+}
+
+
+.iconTools.bold:hover {
+    background-position: -0px -16px; 
+}
+.iconTools.italic:hover {
+    background-position: -16px -16px; 
+}
+.iconTools.underline:hover {
+    background-position: -32px -16px; 
+}
+.iconTools.left-align:hover {
+    background-position: -48px -16px; 
+}
+.iconTools.center-align:hover {
+    background-position: -64px -16px; 
+}
+.iconTools.right-align:hover {
+    background-position: -80px -16px; 
+}
+.iconTools.bullets:hover {
+    background-position: -96px -16px; 
+}
+.iconTools.font:hover {
+    background-position: -112px -16px; 
+}
+.iconTools.font-color:hover {
+    background-position: -128px -16px; 
+}
+.iconTools.href:hover {
+    background-position: -144px -16px; 
+}
+.iconTools.fontSize:hover {
+    background-position: -0px -48px; 
+}
+.iconTools.youtubeVideo:hover {
+    width: 32px;
+    background-position: -16px -48px; 
+}
+.iconTools.embedVideo:hover {
+    background-position: -48px -48px; 
+}
+.iconTools.slideEditIcon:hover {
+    background-position: -128px -48px; 
+}
+.iconTools.hyperlink:hover {
+    background-position: -144px -48px; 
+}
+.iconTools.fromComputer1:hover {
+    background-position: -0px -80px; 
+}
+.iconTools.fromComputer2:hover {
+    background-position: -16px -80px; 
+}
+
+/* Buttons hover */
+.button .button-tooltip {
+    display: none;
+}
+.button:hover .button-tooltip {
+    /* background: url("../../images/glass/button-glass05-content.png"); */
+    background: rgba(21, 21, 21, 0.8);
+    width: 400px;
+    height: auto;
+    
+    display: block;
+    position: absolute;
+    opacity: 1;
+    z-index: 100;
+    
+    margin: 48px 0 0 -21px;
+    padding: 0px;
+    
+    border: rgba(255, 255, 255, 0.3) solid 2px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.button:hover .button-tooltip:after {
+    top: -10px;
+    left: 21px;
+    
+    content: "";
+    position: absolute;
+    
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: rgba(255, 255, 255, 0.3) transparent;
+    
+    display: block;
+    width: 0;
+    z-index: 1;
+}
+.button-tooltip .title {
+    width: 380px;
+    height: 24px;
+    
+    position: relative;
+    float: left;
+    margin: 10px;
+    
+    font-size: 21pt;
+    line-height: 21pt;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: left;
+}
+.button-tooltip .content {
+    width: 380px;
+    height: auto;
+    
+    position: relative;
+    float: left;
+    margin: 0px 10px 10px 10px;
+    
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #bdaec6;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: left;
+}
+
+/* Toolbar buttons */
+.toolbar-button {
+    width: 24px;
+    height: 24px;
+    
+    margin: 8px 0 0 0;
+    
+    position: relative;
+    float: left;
+}
+.toolbar-button-separator {
+    background: rgba(255, 255, 255, 0.1);
+    width: 1px;
+    height: 24px;
+    
+    margin: 4px 10px 0 0;
+    
+    border-right: 1px solid rgba(21, 21 , 21, 1);
+    
+    position: relative;
+    float: left;
+}
+
+.toolbar-button.dropdown .dropdown-list {
+    display: none;
+}
+.toolbar-button.dropdown:hover .dropdown-list {
+    background: url("../../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 150px;
+    height: 200px;
+    
+    border: 1px solid rgba(21, 21 , 21, 0.6);
+    
+    text-align: left;
+    display: block;
+    overflow-y: auto;
+    
+    position: absolute;
+    float: left;
+    z-index: 5;
+    margin: 21px 0 0 -32px;
+    padding: 6px 4px; 
+    
+    -webkit-box-shadow:  0px 3px 21px 3px rgba(21, 21, 21, 0.6);
+        
+        box-shadow:  0px 3px 21px 3px rgba(21, 21, 21, 0.6);
+}
+.toolbar-button.dropdown .dropdown-list-invisible {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.toolbar-button.dropdown .dropdown-list-preparing {
+    display: none;
+    background: red;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.toolbar-button.dropdown:hover .dropdown-list .dropdown-option {
+    margin: 0 2px;
+    
+    font-size: 12pt;
+    color: #bdaec6;
+    text-shadow: 1px 1px 1px #000000;
+    padding: 3px 0;
+    
+    border-top: 1px solid rgba(255, 255 , 255, 0.1);
+    border-bottom: 1px solid rgba(21, 21 , 21, 0.9);
+}
+.toolbar-button.dropdown:hover .dropdown-list .dropdown-option:hover {
+    margin-left: 5px;
+    padding: 3px 0;
+    
+    color: #CCCCCC;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+
+.toolbar-button.dropdown.small {
+    width: 24px;
+    height: 24px;
+    
+    position: relative;
+    float: left;
+}
+.toolbar-button.dropdown.small:hover .dropdown-list {
+    background: url("../../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: 60px;
+    height: 200px;
+    
+    border: 1px solid rgba(21, 21 , 21, 0.6);
+    
+    text-align: left;
+    display: block;
+    overflow-y: auto;
+    
+    position: absolute;
+    float: left;
+    z-index: 5;
+    margin: 23px 0 0 -13px;
+    padding: 6px 4px; 
+}
+
+#font-color-picker {
+    background: url("../../images/backgrounds/page-fader-toolbar.png") repeat;
+    border: 1px solid rgba(21, 21 , 21, 0.6);
+    display: none;
+    
+    position: absolute;
+    float: left;
+    margin: 29px 0 0 29px;
+    z-index: 21;
+}
+
+.confirm-button {
+    background: url("../../images/backgrounds/page-fader-toolbar.png") repeat;
+    width: auto;
+    min-width: 100px;
+    height: 32px;
+    
+    position: relative;
+    float: right;
+    margin-right: -10px;
+    z-index: 10;
+
+    border: 1px solid rgba(21, 21 , 21, 0.9);
+    -webkit-box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.confirm-button:after {
+    width: 0px;  
+    height: 0px;  
+
+    border-style: solid;
+    border-width: 15px 10px 0px 0;
+    border-color: rgba(51, 51, 51, 0.6) transparent;
+    
+    -webkit-box-shadow:  0px 0px 0px 0px transparent;
+    -moz-box-shadow:  0px 0px 0px 0px transparent;
+    box-shadow:  0px 0px 0px 0px transparent;
+    
+    position: relative;
+    float: right;
+    z-index: -1;
+    margin-top: 32px;
+    content: '';  
+}
+
+.confirm-button a {
+    top: 4px;
+    position: relative;
+    
+    font-weight: bold;
+    font-size: 14pt;
+        cursor: pointer;
+    
+    color: #bdaec6;
+    text-shadow: 1px 1px 1px #000000;
+}
+.confirm-button a:hover {
+    top: 3px;
+    text-decoration: none;
+    
+    color: #ffffff;
+}
+.confirm-button a:active {
+    top: 5px;
+    text-decoration: none;
+    
+    color: #bdaec6;
+}
+
+.button.dropdown {
+}
+.button.dropdown .list {
+    display: none;
+}
+.button.dropdown:hover .list {
+    background: rgba(21, 21, 21, 0.8);
+    width: auto;
+    min-width: 160px;
+    height: auto;
+    
+    display: block;
+    position: absolute;
+    opacity: 1;
+    z-index: 100;
+    
+    margin: 38px 0 0 -62px;
+    padding: 5px;
+    
+    border: rgba(255, 255, 255, 0.3) solid 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.button.dropdown:hover .list .option {
+    width: 100%;
+    height: 24px;
+    
+    position: relative;
+    float: left;
+    margin: 4px 0;
+    cursor: pointer;
+    
+    color: #bdaec6;
+    text-shadow: 2px 2px 2px #000000;
+}
+.button.dropdown:hover .list .option:hover {
+    margin-left: 2px;
+    
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+}
+.button.dropdown:hover .list .option span.title { 
+    width: auto;
+    height: 24px;
+    
+    margin: 0 0 0 2px;
+    font-size: 12pt;
+    line-height: 24pt;
+    text-align: left;
+    
+    position: relative;
+    float: left;
+    
+
+}
+.button.dropdown:hover .list .option span.title:hover { 
+    
+}
+.button.dropdown:hover .list .option span.icon {
+    width: 24px;
+    height: 24px;
+    
+    margin: 0 5px;
+    line-height: 24pt;
+    
+    position: relative;
+    float: right;
+}
+.button.dropdown:hover .list .user {
+    width: 100%;
+    
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+.button.dropdown:hover .list .user:hover {
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.04)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.04) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+.button.dropdown:hover .list .user .firstName {
+    width: 88px;
+    
+    margin-top: 16px;
+    font-size: 10pt;
+    line-height: 10pt;
+    text-align: left;
+    color: #AAAAAA;
+    
+    position: relative;
+    float: left;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+.button.dropdown:hover .list .user .lastName {
+    width: 88px;
+    
+    padding: 0;
+    font-size: 16pt;
+    line-height: 16pt;
+    text-align: left;
+    
+    position: relative;
+    float: left;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+.button.dropdown:hover .list .user:hover .firstName {
+    margin-left: 2px;
+}
+.button.dropdown:hover .list .user:hover .lastName {
+    margin-left: 2px;
+}
+.button.dropdown:hover .list .user .avatar {
+    width: 64px;
+    position: relative;
+    float: right;
+    
+    margin-top: -29px;
+}
+
+.label-font-size {
+    width: 38px;
+    height: 24px;
+    
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(21, 21 , 21, 1);
+    
+    position: relative;
+    float: left;
+}
+.label-font-size .input-field {
+    background-color: transparent;
+    border: none;
+    width: 38px;
+    
+    position: relative;
+    float: left;
+    margin-top: 6px; 
+    
+    color: #DDDDDD;
+    font-size: 10pt;
+    text-shadow: 1px 1px 1px #000000;
+    text-align: center;
+}
+/* Edit Label toolbar */
+
+/* Options pane buttons */
+.button-options {
+    background-color: rgba(3, 29, 60, 0.6); 
+    width: 80px;
+    height: 16px;
+    
+    margin: 5px;
+    padding: 6px 15px 2px 15px;
+    position: relative;
+    
+    
+    text-align: center;
+    font-size: 10pt;
+    cursor: pointer;
+    
+    border-radius: 6px; 
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.button-options:hover {
+    background-color: rgba(3, 29, 60, 0.8); 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.3), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.button-options:active {
+    background-color: rgba(3, 29, 60, 0.6); 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.3), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5), inset 0px 0px 6px rgba(21, 21, 21, 0.21);
+}
+
+/* Page fader buttons for presentation mode */
+.button-fader.dark {
+    background-color: rgba(3, 29, 60, 0.6); 
+    width: auto;
+    height: 32px;
+    
+    margin: 5px;
+    padding: 6px 15px 2px 15px;
+    position: relative;
+    
+    
+    text-align: center;
+    font-size: 10pt;
+    cursor: pointer;
+    
+    border-radius: 6px; 
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.21), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.button-fader:hover.dark {
+    background-color: rgba(3, 29, 60, 0.8); 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.3), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.button-fader:active.dark {
+    background-color: rgba(3, 29, 60, 0.6); 
+    box-shadow: inset 0px 0px 13px rgba(235, 235, 235, 0.3), 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5), inset 0px 0px 6px rgba(21, 21, 21, 0.21);
+}
+
+.social-icon {
+    background-image: url("../../images/icons/social-icons-set.png");
+    width: 32px;
+    height: 32px;
+    
+    position: relative;
+    float: left;
+    
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+}
+.social-icon:hover {
+    margin-top: -2px;
+    top: -3px;
+}
+
+.social-icon.facebook {
+    background-position: -0px -0px; 
+}
+.social-icon.twitter {
+    background-position: -32px -0px; 
+}
+.social-icon.google-plus {
+    background-position: -64px -0px; 
+}
+
+.social-icon.facebook:hover {
+    background-position: -0px -32px; 
+}
+.social-icon.twitter:hover {
+    background-position: -32px -32px; 
+}
+.social-icon.google-plus:hover {
+    background-position: -64px -32px; 
+}
+
+.state-icon {
+    background-image: url("../../images/icons-pack3.png");
+    width: 32px;
+    height: 32px;
+    
+    position: relative;
+    float: left;
+}
+
+.state-icon.background-color {
+    background-position: -0px -0px;
+}
+.state-icon.background-image {
+    background-position: -32px -0px;
+}
+
+.state-icon.background-color:hover {
+    background-position: -0px -32px;
+}
+.state-icon.background-image:hover {
+    background-position: -32px -32px;
+}
+
+.state-icon.background-color:active {
+    background-position: -0px -64px;
+}
+.state-icon.background-image:active {
+    background-position: -32px -64px;
+}

@@ -1,0 +1,311 @@
+/*
+ * JSpres
+ * Copyright (C) 2013 Valentin Kirilov
+ * 
+ * This application is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+.floater {
+     position: relative;
+ }
+.floater .center {
+     width: 100%;
+     position: absolute;
+     margin: 100px auto;
+     
+     text-align: center;
+ }
+.floater .left {
+     position: relative;
+     float: left;
+ }
+.floater .right {
+     position: relative;
+     float: right;
+ }
+ 
+ .centerer {
+     width: 100%;
+     text-align: center;
+     margin: 0 auto;
+     position: relative;
+ }
+ 
+ 
+.cropper.auto {
+    background-color: rgba(21, 21, 21, 0.03); 
+    width: 90%;
+    height: 3px;
+    
+    margin: 10px auto 10px auto;
+    position: relative;
+    
+    border-radius: 9px; 
+    border: none;
+    box-shadow: inset 0px 2px 3px black, 0px 0px 4px rgba(235, 235, 235, 0.3);   
+}
+ 
+.imager {
+    background-color: rgba(21, 21, 21, 0.03); 
+    width: 180px;    
+    height: 180px;
+    
+    margin: 5px auto;
+    border-radius: 9px; 
+    border: none;
+    box-shadow: inset 0px 2px 3px black, 0px 0px 4px rgba(235, 235, 235, 0.3);   
+    
+    color: #bdaec6;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: left;
+    font-size: 14pt;
+}
+.imager.stretch {
+    background-color: rgba(21, 21, 21, 0.03); 
+    width: 100%;    
+    height: auto;
+    
+    position: relative;
+    margin: 5px auto;
+    border-radius: 9px; 
+    border: none;
+    box-shadow: inset 0px 2px 3px black, 0px 0px 4px rgba(235, 235, 235, 0.3);   
+    
+    color: #bdaec6;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: left;
+    font-size: 14pt;
+    z-index: 4;
+}
+.imager img {
+    width: 176px;
+    height: 176px;
+    margin: 2px 0 0 2px;
+    
+    border: 0px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px; 
+    position: absolute;
+    z-index: 5;
+}
+.imager img.full {
+    width: 100%;
+    height: auto;
+    margin: 0px 0 0 0px;
+    
+    border: 0px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px; 
+    position: absolute;
+    z-index: 5;
+}
+.imager .shadow {
+    width: 178px;
+    height: 178px;
+    margin: 0;
+    
+    border-radius: 15px; 
+    position: absolute;
+    box-shadow: inset 0px 0px 21px rgba(0, 0, 0, 0.9), inset 0px 0px 51px rgba(0, 0, 0, 0.9), inset 0px 0px 160px rgba(0, 0, 0, 0.6);
+    z-index: 11;
+}
+.imager .shadow.full {
+    width: 100%;
+    height: auto;
+    
+    border-radius: 15px; 
+    position: absolute;
+    box-shadow: inset 0px 0px 21px rgba(0, 0, 0, 0.9), inset 0px 0px 51px rgba(0, 0, 0, 0.9), inset 0px 0px 160px rgba(0, 0, 0, 0.6);
+    z-index: 11;
+}
+.imager .shadow:hover {
+    width: 178px;
+    height: 178px;
+    margin: 0;
+    
+    position: absolute;
+    box-shadow: inset 0px 0px 29px rgba(0, 0, 0, 0.9), inset 0px 0px 61px rgba(0, 0, 0, 0.9), inset 0px 0px 21px rgba(255, 255, 255, 0.9);
+    z-index: 11;
+}
+.imager .shadow.full:hover {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+    position: absolute;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.6), inset 0px 0px 21px rgba(0, 0, 0, 0.6), inset 0px 0px 160px rgba(0, 0, 0, 0.6), inset 0px 0px 50px rgba(255, 255, 255, 0.6);
+    z-index: 11;
+}
+.imager .shadow .info {
+    display: none;
+}
+.imager .shadow:hover .info {
+    margin: 80px auto;
+    display: block;
+
+    font-size: 12pt;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.not_implemented_container {
+    width: 640px;
+    height: auto;
+    
+    margin: 0px 0 0 10px;
+    position: relative;
+    float: left;
+}
+.not_implemented_container.center {
+    width: 800px;
+    height: auto;
+    
+    margin: 20px auto 0 auto;
+    position: relative;
+}
+.not_implemented_container .dontexist
+.not_implemented_container .dontexist {
+    background: rgba(21, 21, 21, 0.3);
+    width: 400px;
+    height: auto;
+
+    position: absolute;
+    float: left;
+    margin: 70px 0 0 90px;
+    
+    border-radius: 25px;
+    padding: 25px;
+    
+    text-align: center;
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.6), 0px 0px 4px rgba(235, 235, 235, 0.1);   
+}
+.not_implemented_container .dontexist .image {
+    background: url('../images/trademark/bat_jspres_320_128.png');
+    width: 320px;
+    height: 138px;
+    
+    position: relative;
+    margin: 0px auto;
+}
+.not_implemented_container .dontexist .message {
+    width: 320px;
+    height: auto;
+    
+    position: relative;
+    margin: 20px auto;
+    
+    font-size: 21pt;
+    text-align: center;
+    color: #AAAAAA;
+    text-shadow: 1px 1px 1px #000000;
+}
+.not_implemented_container.center .message {
+    width: 580px;
+    height: auto;
+    
+    position: relative;
+    margin: 20px auto;
+    
+    font-size: 21pt;
+    text-align: center;
+    color: #AAAAAA;
+    text-shadow: 1px 1px 1px #000000;
+}
+.not_implemented_container.center .message span {
+    color: #0088aa;
+}
+.not_implemented_container .dontexist .buttons {
+    width: 360px;
+    height: auto;
+    
+    position: relative;
+    margin: 0px auto;
+}
+
+.keyboard-button {
+    background: #DDDDDD;
+    height: 32px;
+    
+    padding: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6), inset -1px 0px 2px white; 
+    
+    position: relative;
+    float: left;
+    margin: 3px;
+    cursor: pointer;
+    
+    border-radius: 3px;
+    position: relative;
+}
+.keyboard-button.small {
+    height: 18px;
+    padding: 5px 8px 8px 8px;
+}
+.keyboard-button:hover {
+    background: rgba(255, 255, 255, 0.6);
+    
+    top: -2px; 
+    padding: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4), inset -1px 0px 2px white; 
+    
+    border-radius: 3px;
+}
+.keyboard-button .code {
+    height: 32px;
+    
+    font-size: 21pt;
+    color: #333333;
+}
+.keyboard-button.small .code {
+    height: 16px;
+    
+    font-size: 16pt;
+    color: #333333;
+}
+.keyboard-button .info {
+    background: rgba(255, 255, 255, 0.8);
+    width: 120px;
+    height: 27px;
+
+    display: none;
+    transition: 0.6s;
+    -moz-transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    -ms-transition: 0.6s;
+}
+.keyboard-button:hover .info {
+    background: rgba(255, 255, 255, 0.9);
+    width: 120px;
+    height: auto;
+    display: block;
+    
+    position: relative;
+    z-index: 101;
+    
+    font-size: 12pt;
+    line-height: 12pt;
+    padding: 3px;
+    color: #666666;
+    
+    border-radius: 3px; 
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+
+    position: fixed;
+    margin: -42px 0 0 -40px;
+}
+
+.clearer {
+    clear: both;
+}
